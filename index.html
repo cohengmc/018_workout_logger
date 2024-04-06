@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Workouts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="DragDropTouch.js"></script>
+  </head>
+
+  <body>
+    <h1>GeeksforGeeks</h1>
+    <h3>Drag the text in the rectangle</h3>
+    <p id="drag1" draggable="true">
+      GeeksforGeeks: A computer science portal for geeks.
+    </p>
+    <div id="drop-target" class="dropbox" ondrop="onDrop(event)"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
