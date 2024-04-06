@@ -1,10 +1,5 @@
 .dropbox {
-    width: 350px;
-    height: 40px;
-    padding: 15px;
+    padding: 1em;
+    margin: 1em;
     border: 1px solid #292828;
-}
-
-h1 {
-    color: green;
 }
