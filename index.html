@@ -9,22 +9,12 @@
   </head>
 
   <body>
-    <h3>Workouts Remaining</h3>
-    <div id="workout-container">
-      <p id="core1" draggable="true">Core</p>
-      <p id="core2" draggable="true">Core</p>
-      <p id="balance1" draggable="true">Balence</p>
-      <p id="balance2" draggable="true">Balence</p>
-      <p id="endurance1" draggable="true">Endurance</p>
-      <p id="endurance2" draggable="true">Endurance</p>
-      <p id="arms1" draggable="true">Arms</p>
-      <p id="arms2" draggable="true">Arms</p>
-      <p id="walk1" draggable="true">Walk</p>
-      <p id="walk2" draggable="true">Walk</p>
-      <p id="rest1" draggable="true">Rest</p>
-      <p id="rest2" draggable="true">Rest</p>
-      <p id="rest3" draggable="true">Rest</p>
-      <p id="rest4" draggable="true">Rest</p>
+    <h3>Workout Logger</h3>
+    <div id="workout-box-container">
+      <div draggable="true" class="box workout-box"><p>Endurance</p></div>
+      <div draggable="true" class="box workout-box"><p>Balance</p></div>
+      <div draggable="true" class="box workout-box"><p>Core</p></div>
+      <div draggable="true" class="box workout-box"><p>Arms</p></div>
     </div>
 
     <div
@@ -33,7 +23,7 @@
       default="Session 1"
       ondrop="onDrop(event)"
     >
-      Session 1
+      <div class="box">Session 1</div>
     </div>
     <div
       class="dropbox drop-target"
@@ -41,7 +31,7 @@
       default="Session 2"
       ondrop="onDrop(event)"
     >
-      Session 2
+      <div class="box">Session 2</div>
     </div>
 
     <p>Day <span id="current-day">1</span></p>

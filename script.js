@@ -1,4 +1,4 @@
-const draggableElements = document.querySelectorAll('p[draggable="true"]');
+const draggableElements = document.querySelectorAll('[draggable="true"]');
 const dropElements = document.querySelectorAll(".drop-target");
 
 var timer;
@@ -13,7 +13,7 @@ var time = 60;
 let paused = false;
 let daysComplete = 0;
 
-setInterval(updateCountdown, 1000);
+// setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
     if(!paused){
@@ -92,7 +92,7 @@ function resetWorkouts() {
 
 draggableElements.forEach(draggableElement => {
     draggableElement.addEventListener("dragstart", (event) =>
-        event.dataTransfer.setData("text", event.target.id),
+        event.dataTransfer.setData("text", event.target.outerHTML),
     );
 
 });
@@ -113,7 +113,8 @@ dropElements.forEach(dropElement => {
 
 function onDrop(event) {
     const data = event.dataTransfer.getData("text");
-    event.target.innerHTML = ""
-    event.target.appendChild(document.getElementById(data));
+    console.log(data);
+    event.target.outerHTML = data;
+    // event.target.appendChild(data);
     event.preventDefault();
 }

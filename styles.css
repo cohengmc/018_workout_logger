@@ -3,18 +3,23 @@ body {
 }
 
 .dropbox {
-    padding: 1em;
-    margin: 1em;
-    border: 1px solid #292828;
+    display: flex;
 }
 
-#workout-container {
+#workout-box-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-#workout-container > p{
-    border: 1px solid blue;
+.box {
+    border: 1px solid #292828;
+    line-height: 0;
     display: flex;
-    justify-content: center;
+    margin: auto;
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+.workout-box {
+    background-color: lightblue;
 }
