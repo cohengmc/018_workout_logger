@@ -8,12 +8,16 @@ const threeSecondBtnEl = document.querySelector("#thee-second-btn")
 const currentDayEl = document.querySelector("#current-day")
 const workoutContainerEl = document.querySelector("#workout-container")
 
+const dateEl = document.querySelector("#date")
 
 var time = 60;
 let paused = false;
 let daysComplete = 0;
 
 // setInterval(updateCountdown, 1000);
+
+var currentDate = new Date().toDateString();
+dateEl.innerHTML = currentDate;
 
 function updateCountdown() {
     if(!paused){
@@ -49,21 +53,21 @@ function resetWorkoutWeek() {
     resetWorkouts();
 }
 
-pauseBtnEl.addEventListener('click', function() {
-    paused = !paused;
-    if(paused){
-        pauseBtnEl.innerHTML = 'Play';
-    } else {
-        pauseBtnEl.innerHTML = 'Pause';
-    }
-    console.log(paused);
-})
+// pauseBtnEl.addEventListener('click', function() {
+//     paused = !paused;
+//     if(paused){
+//         pauseBtnEl.innerHTML = 'Play';
+//     } else {
+//         pauseBtnEl.innerHTML = 'Pause';
+//     }
+//     console.log(paused);
+// })
 
-threeSecondBtnEl.addEventListener('click', function() {
-    if(time > 4){
-        time = 4;
-    }
-})
+// threeSecondBtnEl.addEventListener('click', function() {
+//     if(time > 4){
+//         time = 4;
+//     }
+// })
 
 function clearSessionBoxes() {
     dropElements.forEach(dropElement => {

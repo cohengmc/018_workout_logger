@@ -9,37 +9,44 @@
   </head>
 
   <body>
-    <h3>Workout Logger</h3>
-    <div id="workout-box-container">
+    <h1>Workout Logger</h1>
+    <h2 id="date"></h2>
+    <div class="workout-box-container">
       <div draggable="true" class="box workout-box"><p>Endurance</p></div>
       <div draggable="true" class="box workout-box"><p>Balance</p></div>
       <div draggable="true" class="box workout-box"><p>Core</p></div>
       <div draggable="true" class="box workout-box"><p>Arms</p></div>
+      <div draggable="true" class="box workout-box"><p>Walk</p></div>
+      <div draggable="true" class="box workout-box"><p>Rest</p></div>
     </div>
 
-    <div
-      class="dropbox drop-target"
-      id="session1"
-      default="Session 1"
-      ondrop="onDrop(event)"
-    >
-      <div class="box">Session 1</div>
-    </div>
-    <div
-      class="dropbox drop-target"
-      id="session2"
-      default="Session 2"
-      ondrop="onDrop(event)"
-    >
-      <div class="box">Session 2</div>
-    </div>
+    <div id="line-break"></div>
 
-    <p>Day <span id="current-day">1</span></p>
+    <div class="workout-box-container">
+      <div
+        class="dropbox drop-target"
+        id="session1"
+        default="Session 1"
+        ondrop="onDrop(event)"
+      >
+        <div class="box">Session 1</div>
+      </div>
+      <div
+        class="dropbox drop-target"
+        id="session2"
+        default="Session 2"
+        ondrop="onDrop(event)"
+      >
+        <div class="box">Session 2</div>
+      </div>
+    </div>
+    
+    <!-- <p>Day <span id="current-day">1</span></p>
     <div id="js_timer">
       <div id="timer">XX:XX</div>
       <button id="pause-btn">Pause</button>
       <button id="thee-second-btn">Skip to 3 Seconds</button>
-    </div>
+    </div> -->
 
     <script src="script.js"></script>
   </body>

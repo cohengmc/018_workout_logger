@@ -2,11 +2,15 @@ body {
     text-align: center;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
 .dropbox {
     display: flex;
 }
 
-#workout-box-container {
+.workout-box-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -22,4 +26,13 @@ body {
 
 .workout-box {
     background-color: lightblue;
+}
+
+#date { 
+    margin-top: 0;
+}
+
+#line-break {
+    border: 1px solid black;
+    margin: 1em;
 }
