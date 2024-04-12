@@ -1,9 +1,12 @@
 body {
     text-align: center;
+    font-family: "Raleway", sans-serif;
+    background-color: #FBFFF1;
+    color: #383F51;
 }
 
 h1 {
-    margin-bottom: 0;
+    margin: 1.5em 0 0;
 }
 
 .dropbox {
@@ -16,23 +19,51 @@ h1 {
 }
 
 .box {
-    border: 1px solid #292828;
+    border: 2px solid #383F51;
     line-height: 0;
     display: flex;
     margin: auto;
-    padding: 2em;
+    width: 7.5em;
+    height: 6em;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1em;
+    font-weight: 600;
+    border-radius: 16px;
+    font-size: 150%;
 }
 
 .workout-box {
     background-color: lightblue;
+    position: relative;
 }
 
-#date { 
-    margin-top: 0;
+.subheading { 
+    margin: 0 0 1.5em;
 }
 
 #line-break {
-    border: 1px solid black;
-    margin: 1em;
+    border: 1px solid #383F51;
+    margin: .5em 1em 2em;
+
+}
+
+.info-icon {
+    position: absolute ;
+    width: 1.5em;
+    height: 1.5em;
+    right: .5em;
+    top: .5em;
+}
+
+.back-arrow-redirect {
+    position: absolute ;
+    width: 3em;
+    height: 3em;
+    left: 2em;
+    top: 3.5em;
+}
+
+.exercise-list {
+    font-size: 150%;
 }

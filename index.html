@@ -6,23 +6,32 @@
     <title>Drag Workouts</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="DragDropTouch.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Chicle&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Happy+Monkey&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <h1>Workout Logger</h1>
-    <h2 id="date"></h2>
+    <h2 id="date" class="subheading"></h2>
     <div class="workout-box-container">
-      <div draggable="true" class="box workout-box"><p>Endurance</p></div>
+      <div draggable="true" class="box workout-box" id="endurance-redirect" >
+          <img
+            class="info-icon"
+            src="assets/info.png"
+            alt="more information icon"
+          />
+        <p>Endurance</p>
+      </div>
       <div draggable="true" class="box workout-box"><p>Balance</p></div>
       <div draggable="true" class="box workout-box"><p>Core</p></div>
       <div draggable="true" class="box workout-box"><p>Arms</p></div>
       <div draggable="true" class="box workout-box"><p>Walk</p></div>
       <div draggable="true" class="box workout-box"><p>Rest</p></div>
     </div>
-
-    <p>hey</p>
-    <p>another one</p>
-    <p>testingtesting</p>
 
     <div id="line-break"></div>
 
@@ -44,7 +53,7 @@
         <div class="box">Session 2</div>
       </div>
     </div>
-    
+
     <!-- <p>Day <span id="current-day">1</span></p>
     <div id="js_timer">
       <div id="timer">XX:XX</div>

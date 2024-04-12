@@ -2,13 +2,15 @@ const draggableElements = document.querySelectorAll('[draggable="true"]');
 const dropElements = document.querySelectorAll(".drop-target");
 
 var timer;
-const timerEl = document.querySelector("#timer")
-const pauseBtnEl = document.querySelector("#pause-btn")
-const threeSecondBtnEl = document.querySelector("#thee-second-btn")
-const currentDayEl = document.querySelector("#current-day")
-const workoutContainerEl = document.querySelector("#workout-container")
+const timerEl = document.querySelector("#timer");
+const pauseBtnEl = document.querySelector("#pause-btn");
+const threeSecondBtnEl = document.querySelector("#thee-second-btn");
+const currentDayEl = document.querySelector("#current-day");
+const workoutContainerEl = document.querySelector("#workout-container");
 
-const dateEl = document.querySelector("#date")
+const dateEl = document.querySelector("#date");
+
+const enduranceRedirectEl = document.querySelector("#endurance-redirect");
 
 var time = 60;
 let paused = false;
@@ -93,6 +95,10 @@ function resetWorkouts() {
     <p id="rest4" draggable="true">Rest</p>
     `
 }
+
+enduranceRedirectEl.addEventListener('click', function(){
+    window.location.href = "endurance.html";
+})
 
 draggableElements.forEach(draggableElement => {
     draggableElement.addEventListener("dragstart", (event) =>
