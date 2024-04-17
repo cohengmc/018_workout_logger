@@ -1,8 +1,14 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     text-align: center;
     font-family: "Raleway", sans-serif;
     background-color: #FBFFF1;
     color: #383F51;
+    overflow-x: hidden;
+
 }
 
 h1 {
@@ -83,11 +89,12 @@ h1 {
 .exercise-demo-img {
     width: 100%;
     border-radius: 16px;
+    clip-path: inset(0em 2em);
 }
 
 #forward-lunge-demo {
     transform: scale(2);
     width: 100%;
-    clip-path: inset(1.5em);
+    clip-path: inset(1.5em 5em);
 
 }
