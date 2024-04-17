@@ -12,28 +12,9 @@ const dateEl = document.querySelector("#date");
 
 const enduranceRedirectEl = document.querySelector("#endurance-redirect");
 
-var time = 60;
-let paused = false;
-let daysComplete = 0;
-
-// setInterval(updateCountdown, 1000);
 
 var currentDate = new Date().toDateString();
 dateEl.innerHTML = currentDate;
-
-function updateCountdown() {
-    if(!paused){
-        time--;
-    }
-
-    timerEl.innerHTML = time;
-
-    if(time == 0){
-        time = 60;
-        newDay();
-        console.log("Hooray!");
-    }
-}
 
 function newDay() {
     daysComplete++;
@@ -42,7 +23,7 @@ function newDay() {
 
 function updateDay() {
     currentDayEl.innerHTML = 1 + daysComplete
-    if(daysComplete == 7){
+    if (daysComplete == 7) {
         resetWorkoutWeek();
     }
 
@@ -52,24 +33,7 @@ function updateDay() {
 function resetWorkoutWeek() {
     daysComplete = 0;
     updateDay();
-    resetWorkouts();
 }
-
-// pauseBtnEl.addEventListener('click', function() {
-//     paused = !paused;
-//     if(paused){
-//         pauseBtnEl.innerHTML = 'Play';
-//     } else {
-//         pauseBtnEl.innerHTML = 'Pause';
-//     }
-//     console.log(paused);
-// })
-
-// threeSecondBtnEl.addEventListener('click', function() {
-//     if(time > 4){
-//         time = 4;
-//     }
-// })
 
 function clearSessionBoxes() {
     dropElements.forEach(dropElement => {
@@ -77,26 +41,7 @@ function clearSessionBoxes() {
     });
 }
 
-function resetWorkouts() {
-    workoutContainerEl.innerHTML = `
-    <p id="core1" draggable="true">Core</p>
-    <p id="core2" draggable="true">Core</p>
-    <p id="balance1" draggable="true">Balence</p>
-    <p id="balance2" draggable="true">Balence</p>
-    <p id="endurance1" draggable="true">Endurance</p>
-    <p id="endurance2" draggable="true">Endurance</p>
-    <p id="arms1" draggable="true">Arms</p>
-    <p id="arms2" draggable="true">Arms</p>
-    <p id="walk1" draggable="true">Walk</p>
-    <p id="walk2" draggable="true">Walk</p>
-    <p id="rest1" draggable="true">Rest</p>
-    <p id="rest2" draggable="true">Rest</p>
-    <p id="rest3" draggable="true">Rest</p>
-    <p id="rest4" draggable="true">Rest</p>
-    `
-}
-
-enduranceRedirectEl.addEventListener('click', function(){
+enduranceRedirectEl.addEventListener('click', function () {
     window.location.href = "endurance.html";
 })
 
@@ -122,9 +67,16 @@ dropElements.forEach(dropElement => {
 });
 
 function onDrop(event) {
-    const data = event.dataTransfer.getData("text");
-    console.log(data);
-    event.target.outerHTML = data;
-    // event.target.appendChild(data);
-    event.preventDefault();
+    console.log(event.target.classList);
+    if (event.target.parentElement.classList.contains("drop-target")) {
+        let outter = event.target.parentElement;
+        event.target.remove();
+        const data = event.dataTransfer.getData("text");
+        outter.innerHTML = data;
+    } else if (event.target.parentElement.parentElement.classList.contains("drop-target")) {
+        let outter = event.target.parentElement.parentElement;
+        event.target.remove();
+        const data = event.dataTransfer.getData("text");
+        outter.innerHTML = data;
+    } 
 }

@@ -18,12 +18,12 @@
     <h1>Workout Logger</h1>
     <h2 id="date" class="subheading"></h2>
     <div class="workout-box-container">
-      <div draggable="true" class="box workout-box" id="endurance-redirect" >
-          <img
-            class="info-icon"
-            src="assets/info.png"
-            alt="more information icon"
-          />
+      <div draggable="true" class="box workout-box" id="endurance-redirect">
+        <img
+          class="info-icon"
+          src="assets/info.png"
+          alt="more information icon"
+        />
         <p>Endurance</p>
       </div>
       <div draggable="true" class="box workout-box"><p>Balance</p></div>
@@ -36,30 +36,29 @@
     <div id="line-break"></div>
 
     <div class="workout-box-container">
-      <div
-        class="dropbox drop-target"
-        id="session1"
-        default="Session 1"
-        ondrop="onDrop(event)"
-      >
-        <div class="box">Session 1</div>
+      <div class="workout-session">
+        <div
+          class="dropbox drop-target"
+          id="session1"
+          default="Session 1"
+          ondrop="onDrop(event)"
+        >
+          <div class="box">Session 1</div>
+        </div>
+        <p class="clear-btn">clear</p>
       </div>
-      <div
-        class="dropbox drop-target"
-        id="session2"
-        default="Session 2"
-        ondrop="onDrop(event)"
-      >
-        <div class="box">Session 2</div>
+      <div class="workout-session">
+        <div
+          class="dropbox drop-target"
+          id="session2"
+          default="Session 2"
+          ondrop="onDrop(event)"
+        >
+          <div class="box">Session 2</div>
+        </div>
+        <p class="clear-btn">clear</p>
       </div>
     </div>
-
-    <!-- <p>Day <span id="current-day">1</span></p>
-    <div id="js_timer">
-      <div id="timer">XX:XX</div>
-      <button id="pause-btn">Pause</button>
-      <button id="thee-second-btn">Skip to 3 Seconds</button>
-    </div> -->
 
     <script src="script.js"></script>
   </body>
