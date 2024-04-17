@@ -42,7 +42,7 @@ h1 {
     margin: 0 0 1.5em;
 }
 
-#line-break {
+.line-break {
     border: 1px solid #383F51;
     margin: .5em 1em 2em;
 
@@ -78,4 +78,16 @@ h1 {
     padding: .2em;
     align-items: center;
     margin: auto;
+}
+
+.exercise-demo-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+#forward-lunge-demo {
+    transform: scale(2);
+    width: 100%;
+    clip-path: inset(1.5em);
+
 }
